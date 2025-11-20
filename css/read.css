@@ -1,0 +1,7 @@
+.edit-and-delete-container {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: .3rem;
+}
