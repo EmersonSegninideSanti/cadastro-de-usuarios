@@ -1,0 +1,23 @@
+.create-button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+table {
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    height: 200px;
+    overflow: hidden;
+}
+table td, table th {
+    white-space: nowrap;
+    padding: 0rem .5rem;
+    text-align: left;
+}
+table a {
+    text-decoration: none;
+    color: black;
+}
+table a:hover {
+    text-decoration: underline;
+}
