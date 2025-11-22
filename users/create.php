@@ -43,9 +43,9 @@
 
                     // Produção do HTML
                     if ($result) {
-                        echo "<p class='conclusion_msg'>Usuário Criado!</p>";
+                        echo "<p class='conclusion-msg'>Usuário Criado!</p>";
                     } else {
-                        echo "<p class='failure_msg'>Criação Fracassada!</p>";
+                        echo "<p class='failure-msg'>Criação Fracassada!</p>";
                     }
                     echo "<label for='name'>Nome Completo</label>";
                     echo "<input id='name' name='name' type='text' required minlength='5' maxlength='50' class='text-input' value='$form_name'>";

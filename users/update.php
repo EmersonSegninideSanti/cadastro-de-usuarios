@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="central-box">
-            <h1>Criação de Usuário</h1>
+            <h1>Alteração de Usuário</h1>
             <form action="/users/update.php" method="POST">
                 <?php
                     if ($_SERVER['REQUEST_METHOD'] === 'GET') {
@@ -38,7 +38,7 @@
                             $the_email = $row['usr_email'];
                             $the_password = $row['usr_password'];
                             echo "<label for='name'>Nome Completo</label>";
-                            echo "<input id='name' name='name' type='text' required minlength='5' maxlength='50' class='text-input' value=$the_name>";
+                            echo "<input id='name' name='name' type='text' required minlength='5' maxlength='50' class='text-input' value='$the_name'>";
                             echo "<label for='email'>E-mail</label>";
                             echo "<input id='email' name='email' type='email' required  class='text-input' value='$the_email'>";
                             echo "<label for='password'>Senha</label>";
@@ -71,9 +71,9 @@
                     
                         // Produção do HTML
                         if ($result) {
-                            echo "<p class='conclusion_msg'>Usuário Alterado!</p>";
+                            echo "<p class='conclusion-msg'>Usuário Alterado!</p>";
                         } else {
-                            echo "<p class='failure_msg'>Alteração Fracassada!</p>";
+                            echo "<p class='failure-msg'>Alteração Fracassada!</p>";
                         }
                         echo "<label for='name'>Nome Completo</label>";
                         echo "<input id='name' name='name' type='text' required minlength='5' maxlength='50' class='text-input' value='$form_name'>";
@@ -90,7 +90,12 @@
                 ?>
             </form>
         </div>
-        <a href="/users" class="link-button return-button">Voltar</a>
+        <a href="/users/read.php?id=<?php 
+        if ($_SERVER['REQUEST_METHOD']==='GET')
+        {$the_id = $_GET['id'];} else
+        {$the_id = $_POST['id'];}
+        echo "$the_id"
+        ?>" class="link-button return-button">Voltar</a>
     </div>
 </body>
 </html>
