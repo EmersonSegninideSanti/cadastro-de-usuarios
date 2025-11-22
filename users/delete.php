@@ -6,6 +6,7 @@
     <title>Deletar Usuário</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/read.css">
+    <link rel="stylesheet" href="/css/delete.css">
     <style>
 
     </style>
@@ -67,9 +68,9 @@
 
                     //Produção do HTML
                     if ($result) {
-                        echo "<p class='conclusion_msg'>Usuário Deletado!</p>";
+                        echo "<p class='conclusion-msg'>Usuário Deletado!</p>";
                     } else {
-                        echo "<p class='failure_msg'>Deleção Fracassada!</p>";
+                        echo "<p class='failure-msg'>Deleção Fracassada!</p>";
                     }
 
 
@@ -82,16 +83,21 @@
                 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                     $id = $_GET['id'];
                     echo "<div class='edit-and-delete-container'>";
-                    echo "<a href='/users' class='link-button'>Cancelar</a>";
+                    echo "<a href='/users/read.php?id=$id' class='link-button'>Cancelar</a>";
                     echo "<form action='/users/delete.php' method='POST'>";
                     echo "<input type='hidden' name='id' value='$id'>";
                     echo "<input class='link-button' type='submit' value='Deletar'>";
                     echo "</form>";
-                    echo "</div>;";
+                    echo "</div>";
                 }
                 ?>
         </div>
-        <a href="/users" class="link-button return-button">Voltar</a>
+        <a href="/users/read.php?id=<?php 
+        if ($_SERVER['REQUEST_METHOD']==='GET')
+        {$the_id = $_GET['id'];} else
+        {$the_id = $_POST['id'];}
+        echo "$the_id"
+        ?>" class="link-button return-button">Voltar</a>
     </div>
 </body>
 </html>

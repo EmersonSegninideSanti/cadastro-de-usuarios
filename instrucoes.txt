@@ -2,11 +2,11 @@ Nome do Aluno: Emerson Segnini de Santi
 RA: 8207059
 Disciplina: Programação para Web
 
-Instruções;
+Instruções
 
-1 - Para rodar este site no Xampp, copie a pasta 'users' e a cole na
-diretamente dentro da pasta htdocs. Os arquivos tem as URLS definidas 
-para funcionarem nesta localização.
+1 - Para rodar este site no Xampp, copie a pasta 'users' e a pasta 'css'
+e as cole diretamente dentro da pasta htdocs. Os arquivos tem as URLS 
+definidas para funcionarem nesta localização.
 
 2 - É preciso a criar banco de dados e de uma tabela. Este procedimento 
 é feito pelo arquivo database.php que está nesta pasta.

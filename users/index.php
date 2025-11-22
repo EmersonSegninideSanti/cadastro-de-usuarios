@@ -35,7 +35,7 @@
                         $the_id = $row['usr_id'];
                         $the_name = $row['usr_name'];
                         $the_creation_date = $row['usr_creation_date'];
-                        echo "<tr><td><a href='/users/read.php?id=$the_id'>$the_id</a></td><td><a href='/users/read.php?id=$the_id'>$the_name</a></td><td>$the_creation_date</td></tr>";
+                        echo "<tr onclick='window.location=\"/users/read.php?id=$the_id\";' class='link-row'><td><a href='/users/read.php?id=$the_id'>$the_id</a></td><td><a href='/users/read.php?id=$the_id'>$the_name</a></td><td><a href='/users/read.php?id=$the_id'>$the_creation_date</a></td></tr>";
                     }
 
 
